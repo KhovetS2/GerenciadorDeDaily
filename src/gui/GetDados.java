@@ -86,6 +86,8 @@ public class GetDados extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane3.setPreferredSize(new java.awt.Dimension(920, 591));
+
         tabelaDaily.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null}
@@ -102,6 +104,7 @@ public class GetDados extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tabelaDaily.setPreferredSize(new java.awt.Dimension(920, 591));
         jScrollPane3.setViewportView(tabelaDaily);
 
         jScrollPane2.setViewportView(jScrollPane3);

@@ -35,7 +35,7 @@ public class Dashboard extends javax.swing.JFrame {
         
         
         FazerDaily.setBackground(DefaultColor);
-        Menu2.setBackground(DefaultColor);
+        VerDaily.setBackground(DefaultColor);
         Menu3.setBackground(DefaultColor);
         Menu4.setBackground(DefaultColor);
         Menu5.setBackground(DefaultColor);
@@ -60,7 +60,7 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         FazerDaily = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        Menu2 = new javax.swing.JPanel();
+        VerDaily = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         Menu3 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
@@ -144,35 +144,38 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel5.add(FazerDaily, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 52, -1, -1));
 
-        Menu2.setBackground(new java.awt.Color(13, 36, 70));
-        Menu2.addMouseListener(new java.awt.event.MouseAdapter() {
+        VerDaily.setBackground(new java.awt.Color(13, 36, 70));
+        VerDaily.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                VerDailyMouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                Menu2MousePressed(evt);
+                VerDailyMousePressed(evt);
             }
         });
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-daily-40.png"))); // NOI18N
-        jLabel10.setText("Fazer Daily");
+        jLabel10.setText("Ver Daily");
 
-        javax.swing.GroupLayout Menu2Layout = new javax.swing.GroupLayout(Menu2);
-        Menu2.setLayout(Menu2Layout);
-        Menu2Layout.setHorizontalGroup(
-            Menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Menu2Layout.createSequentialGroup()
+        javax.swing.GroupLayout VerDailyLayout = new javax.swing.GroupLayout(VerDaily);
+        VerDaily.setLayout(VerDailyLayout);
+        VerDailyLayout.setHorizontalGroup(
+            VerDailyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(VerDailyLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(7, Short.MAX_VALUE))
         );
-        Menu2Layout.setVerticalGroup(
-            Menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Menu2Layout.createSequentialGroup()
+        VerDailyLayout.setVerticalGroup(
+            VerDailyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, VerDailyLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel5.add(Menu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, -1, -1));
+        jPanel5.add(VerDaily, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, -1, -1));
 
         Menu3.setBackground(new java.awt.Color(13, 36, 70));
         Menu3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -289,7 +292,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -304,7 +307,7 @@ public class Dashboard extends javax.swing.JFrame {
     private void FazerDailyMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FazerDailyMousePressed
         // TODO add your handling code here:
         FazerDaily.setBackground(ClickColor);
-        Menu2.setBackground(DefaultColor);
+        VerDaily.setBackground(DefaultColor);
         Menu3.setBackground(DefaultColor);
         Menu4.setBackground(DefaultColor);
         Menu5.setBackground(DefaultColor);
@@ -312,21 +315,21 @@ public class Dashboard extends javax.swing.JFrame {
         MenuName.setText("Fazer Daily");
     }//GEN-LAST:event_FazerDailyMousePressed
 
-    private void Menu2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu2MousePressed
+    private void VerDailyMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VerDailyMousePressed
         // TODO add your handling code here:
         FazerDaily.setBackground(DefaultColor);
-        Menu2.setBackground(ClickColor);
+        VerDaily.setBackground(ClickColor);
         Menu3.setBackground(DefaultColor);
         Menu4.setBackground(DefaultColor);
         Menu5.setBackground(DefaultColor);
         
-        MenuName.setText("Fazer Daily2");
-    }//GEN-LAST:event_Menu2MousePressed
+        MenuName.setText("Ver Daily");
+    }//GEN-LAST:event_VerDailyMousePressed
 
     private void Menu3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu3MousePressed
         // TODO add your handling code here:
         FazerDaily.setBackground(DefaultColor);
-        Menu2.setBackground(DefaultColor);
+        VerDaily.setBackground(DefaultColor);
         Menu3.setBackground(ClickColor);
         Menu4.setBackground(DefaultColor);
         Menu5.setBackground(DefaultColor);
@@ -337,7 +340,7 @@ public class Dashboard extends javax.swing.JFrame {
     private void Menu4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu4MousePressed
         // TODO add your handling code here:
         FazerDaily.setBackground(DefaultColor);
-        Menu2.setBackground(DefaultColor);
+        VerDaily.setBackground(DefaultColor);
         Menu3.setBackground(DefaultColor);
         Menu4.setBackground(ClickColor);
         Menu5.setBackground(DefaultColor);
@@ -348,7 +351,7 @@ public class Dashboard extends javax.swing.JFrame {
     private void Menu5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu5MousePressed
         // TODO add your handling code here:
         FazerDaily.setBackground(DefaultColor);
-        Menu2.setBackground(DefaultColor);
+        VerDaily.setBackground(DefaultColor);
         Menu3.setBackground(DefaultColor);
         Menu4.setBackground(DefaultColor);
         Menu5.setBackground(ClickColor);
@@ -369,6 +372,21 @@ public class Dashboard extends javax.swing.JFrame {
         jDesktopPanel.removeAll();
         jDesktopPanel.add(fazerDaily).setVisible(true);
     }//GEN-LAST:event_FazerDailyMouseClicked
+
+    private void VerDailyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VerDailyMouseClicked
+        // TODO add your handling code here:
+        MostrarDailys mostrarDaily;
+        if (this.usuario==null){
+            mostrarDaily = new MostrarDailys();
+        }
+        else{
+            mostrarDaily = new MostrarDailys(usuario.getId());
+        }
+        
+        jDesktopPanel.removeAll();
+        jDesktopPanel.add(mostrarDaily).setVisible(true);
+        
+    }//GEN-LAST:event_VerDailyMouseClicked
 
     /**
      * @param args the command line arguments
@@ -407,11 +425,11 @@ public class Dashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel FazerDaily;
-    private javax.swing.JPanel Menu2;
     private javax.swing.JPanel Menu3;
     private javax.swing.JPanel Menu4;
     private javax.swing.JPanel Menu5;
     private javax.swing.JLabel MenuName;
+    private javax.swing.JPanel VerDaily;
     private javax.swing.JDesktopPane jDesktopPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

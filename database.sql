@@ -1,7 +1,7 @@
 show databases;
-create database teste;
+create database daily;
 
-use teste;
+use daily;
 
 CREATE TABLE usuario (
 	id int auto_increment NOT NULL PRIMARY KEY,
@@ -23,3 +23,6 @@ constraint fk_usuario_id foreign key (usuario_id) references usuario(id)
 
 select daily.id, Conteudo, dataRealizada, nome, cargo from daily inner join usuario on usuario.id = daily.usuario_id;
 desc usuario;
+
+CREATE USER 'fatec'@'%' IDENTIFIED BY 'fatec';
+GRANT ALL PRIVILEGES ON daily . * TO 'fatec'@'%';

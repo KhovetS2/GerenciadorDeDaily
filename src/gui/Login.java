@@ -170,6 +170,7 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 465));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jPanLoginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanLoginMouseEntered

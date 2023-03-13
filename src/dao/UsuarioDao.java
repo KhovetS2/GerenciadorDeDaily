@@ -28,7 +28,6 @@ public class UsuarioDao {
             stmt.setString(2, usuario.getCargo());
             stmt.setString(3, usuario.getSenha());
             stmt.execute();
-            System.out.println("Usuario"+"\n"+"testando se funfa");
             stmt.close();
             JOptionPane.showMessageDialog(null, "Usuário criado com sucesso");
             return true;
@@ -61,6 +60,28 @@ public class UsuarioDao {
         }
     }
 
-
-
+    
+    public Usuarios getUsuarioById(int id) {
+        Usuarios usuarios = new Usuarios();
+        String sql = "SELECT * FROM usuario WHERE id = ?";
+        this.conexao = new Conection().getConnection();
+        try {
+            stmt = conexao.prepareStatement(sql);
+            stmt.setString(1,""+id );
+            rs = stmt.executeQuery();
+            if (rs.next()) {
+                usuarios.setId(rs.getInt("id"));
+                usuarios.setNome(rs.getString("nome"));
+                usuarios.setCargo(rs.getString("cargo"));
+                usuarios.setSenha(rs.getString("senha"));
+                return usuarios;
+            }else{
+                JOptionPane.showMessageDialog(null, "Usuário com esse id não foi encontrado");
+                return null;
+            }
+        } catch (SQLException exception) {
+            // TODO: handle exception
+            throw new RuntimeException(exception);
+        }
+}
 }
