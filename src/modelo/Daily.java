@@ -2,22 +2,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package gerenciadodedaily;
+package modelo;
 
 /**
  *
  * @author isaqu
  */
-import java.util.Date;
-import java.util.Calendar;
+import java.sql.Date;
 
-import javax.swing.JOptionPane;
+
 
 public class Daily {
     private int id;
     private String conteudo;
     private Date data;
     private int usuarios_id;
+    private String nome;
+    private String cargo;
     
     public Daily() {
     }
@@ -49,6 +50,23 @@ public class Daily {
         return this.data;
     }
 
+    public String getNome() {
+        return this.nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCargo() {
+        return this.cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+
     public void setData(Date data) {
         this.data = data;
     }
@@ -61,18 +79,8 @@ public class Daily {
         this.usuarios_id = usuarios_id;
     }
     
-    
-    public void getDados() {
-        Calendar c = Calendar.getInstance();
-        int id = Integer.parseInt(JOptionPane.showInputDialog("Digite o Id: "));
-        String conteudo = JOptionPane.showInputDialog("Digite o conteúdo da Daily: ");
-        int usuarios_id = Integer.parseInt(JOptionPane.showInputDialog("Digite o seu id de Usuário: "));
-        this.id=id;
-        this.conteudo=conteudo;
-        this.data=c.getTime();
-        this.usuarios_id=usuarios_id;
-    }
-    public void mostrarConteudo() {
-        JOptionPane.showMessageDialog(null, "Id: "+id+"\nConteudo: "+conteudo+"\nData:"+data+" \nUsuarios_id:"+usuarios_id+" \n","Sua daily", JOptionPane.INFORMATION_MESSAGE);
-    }
+
+    public static void main(String[] args) {
+  }
 }
+    

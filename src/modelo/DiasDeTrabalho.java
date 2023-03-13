@@ -1,4 +1,4 @@
-package gerenciadodedaily;
+package modelo;
 
 import java.text.DateFormat;
 import java.util.Calendar;

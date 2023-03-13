@@ -1,4 +1,4 @@
-package gerenciadodedaily;
+package modelo;
 
 public class Avisos {
     private int id;
