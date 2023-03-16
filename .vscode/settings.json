@@ -2,6 +2,9 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "dist/lib/AbsoluteLayout.jar",
-        "dist/lib/mysql-connector-java-8.0.30.jar"
+        "dist/lib/mysql-connector-java-8.0.30.jar",
+        "build/AbsoluteLayout-RELEASE170.jar",
+        "c:\\Program Files (x86)\\MySQL\\Connector J 8.0\\mysql-connector-java-8.0.30.jar",
+        "c:\\Program Files (x86)\\MySQL\\Connector J 8.0\\mysql-connector-j-8.0.32.jar"
     ]
 }

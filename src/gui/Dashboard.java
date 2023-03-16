@@ -33,12 +33,17 @@ public class Dashboard extends javax.swing.JFrame {
         DefaultColor= new Color(13,36,70);
         ClickColor = new Color(220,141,77);
         
+        bemVindoText.setText(bemVindoText.getText()+" "+this.usuario.getNome());
+        seuIdText.setText(seuIdText.getText()+" "+this.usuario.getId());
         
-        FazerDaily.setBackground(DefaultColor);
-        VerDaily.setBackground(DefaultColor);
+        FazerDailyButton.setBackground(DefaultColor);
+        VerDailyButton.setBackground(DefaultColor);
         Menu3.setBackground(DefaultColor);
         Menu4.setBackground(DefaultColor);
         Menu5.setBackground(DefaultColor);
+        Menu6.setBackground(DefaultColor);
+        Menu7.setBackground(DefaultColor);
+
     }
 
     /**
@@ -52,222 +57,190 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         MenuName = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        seuIdText = new javax.swing.JLabel();
+        bemVindoText = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        FazerDaily = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        VerDaily = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        Menu3 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        Menu4 = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        Menu5 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
+        FazerDailyButton = new javax.swing.JButton();
+        VerDailyButton = new javax.swing.JButton();
+        Menu3 = new javax.swing.JButton();
+        Menu4 = new javax.swing.JButton();
+        Menu5 = new javax.swing.JButton();
+        Menu6 = new javax.swing.JButton();
+        Menu7 = new javax.swing.JButton();
         jDesktopPanel = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel4.setBackground(new java.awt.Color(220, 141, 77));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-fechar-janela-48.png"))); // NOI18N
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
-            }
-        });
-        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 10, 50, 80));
-
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-menu-do-xbox-40.png"))); // NOI18N
-        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, 50));
+        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, 60));
 
         MenuName.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         MenuName.setForeground(new java.awt.Color(255, 255, 255));
         MenuName.setText("Menu");
-        jPanel4.add(MenuName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
+        jPanel4.add(MenuName, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, -1, 40));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Detalhes do gerenciador");
-        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, 20));
+        seuIdText.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        seuIdText.setForeground(new java.awt.Color(255, 255, 255));
+        seuIdText.setText("Seu Id: ");
+        jPanel4.add(seuIdText, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 10, 80, 20));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Gerenciador");
-        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        bemVindoText.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        bemVindoText.setForeground(new java.awt.Color(255, 255, 255));
+        bemVindoText.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-welcome-64.png"))); // NOI18N
+        bemVindoText.setText("Bem-Vindo");
+        jPanel4.add(bemVindoText, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 710, 80));
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 100));
 
         jPanel5.setBackground(new java.awt.Color(13, 36, 70));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        FazerDaily.setBackground(new java.awt.Color(13, 36, 70));
-        FazerDaily.addMouseListener(new java.awt.event.MouseAdapter() {
+        FazerDailyButton.setBackground(new java.awt.Color(13, 36, 70));
+        FazerDailyButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        FazerDailyButton.setForeground(new java.awt.Color(255, 255, 255));
+        FazerDailyButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-daily-40.png"))); // NOI18N
+        FazerDailyButton.setText("Fazer Daily");
+        FazerDailyButton.setBorder(null);
+        FazerDailyButton.setBorderPainted(false);
+        FazerDailyButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                FazerDailyMouseClicked(evt);
+                FazerDailyButtonMouseClicked(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                FazerDailyMousePressed(evt);
+                FazerDailyButtonMousePressed(evt);
             }
         });
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-daily-40.png"))); // NOI18N
-        jLabel1.setText("Fazer Daily");
-
-        javax.swing.GroupLayout FazerDailyLayout = new javax.swing.GroupLayout(FazerDaily);
-        FazerDaily.setLayout(FazerDailyLayout);
-        FazerDailyLayout.setHorizontalGroup(
-            FazerDailyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FazerDailyLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(7, Short.MAX_VALUE))
-        );
-        FazerDailyLayout.setVerticalGroup(
-            FazerDailyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FazerDailyLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        jPanel5.add(FazerDaily, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 52, -1, -1));
-
-        VerDaily.setBackground(new java.awt.Color(13, 36, 70));
-        VerDaily.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                VerDailyMouseClicked(evt);
+        FazerDailyButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FazerDailyButtonActionPerformed(evt);
             }
+        });
+        jPanel5.add(FazerDailyButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 179, 57));
+
+        VerDailyButton.setBackground(new java.awt.Color(13, 36, 70));
+        VerDailyButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        VerDailyButton.setForeground(new java.awt.Color(255, 255, 255));
+        VerDailyButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-daily-40.png"))); // NOI18N
+        VerDailyButton.setText("Ver Daily");
+        VerDailyButton.setBorder(null);
+        VerDailyButton.setBorderPainted(false);
+        VerDailyButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                VerDailyMousePressed(evt);
+                VerDailyButtonMousePressed(evt);
             }
         });
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-daily-40.png"))); // NOI18N
-        jLabel10.setText("Ver Daily");
-
-        javax.swing.GroupLayout VerDailyLayout = new javax.swing.GroupLayout(VerDaily);
-        VerDaily.setLayout(VerDailyLayout);
-        VerDailyLayout.setHorizontalGroup(
-            VerDailyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(VerDailyLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(7, Short.MAX_VALUE))
-        );
-        VerDailyLayout.setVerticalGroup(
-            VerDailyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, VerDailyLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        jPanel5.add(VerDaily, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, -1, -1));
+        VerDailyButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VerDailyButtonActionPerformed(evt);
+            }
+        });
+        jPanel5.add(VerDailyButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 180, 57));
 
         Menu3.setBackground(new java.awt.Color(13, 36, 70));
+        Menu3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        Menu3.setForeground(new java.awt.Color(255, 255, 255));
+        Menu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-calendário-de-folgas-40.png"))); // NOI18N
+        Menu3.setText("Cadastrar Dias");
+        Menu3.setBorder(null);
+        Menu3.setBorderPainted(false);
         Menu3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 Menu3MousePressed(evt);
             }
         });
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-daily-40.png"))); // NOI18N
-        jLabel7.setText("Fazer Daily");
-
-        javax.swing.GroupLayout Menu3Layout = new javax.swing.GroupLayout(Menu3);
-        Menu3.setLayout(Menu3Layout);
-        Menu3Layout.setHorizontalGroup(
-            Menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Menu3Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(7, Short.MAX_VALUE))
-        );
-        Menu3Layout.setVerticalGroup(
-            Menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Menu3Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        jPanel5.add(Menu3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, -1, -1));
+        Menu3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Menu3ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(Menu3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 180, 57));
 
         Menu4.setBackground(new java.awt.Color(13, 36, 70));
+        Menu4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Menu4.setForeground(new java.awt.Color(255, 255, 255));
+        Menu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-daily-40.png"))); // NOI18N
+        Menu4.setText("Mostrar Daily");
+        Menu4.setBorder(null);
+        Menu4.setBorderPainted(false);
         Menu4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 Menu4MousePressed(evt);
             }
         });
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-daily-40.png"))); // NOI18N
-        jLabel9.setText("Fazer Daily");
-
-        javax.swing.GroupLayout Menu4Layout = new javax.swing.GroupLayout(Menu4);
-        Menu4.setLayout(Menu4Layout);
-        Menu4Layout.setHorizontalGroup(
-            Menu4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Menu4Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(7, Short.MAX_VALUE))
-        );
-        Menu4Layout.setVerticalGroup(
-            Menu4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Menu4Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        jPanel5.add(Menu4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, -1, -1));
+        Menu4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Menu4ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(Menu4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 180, 57));
 
         Menu5.setBackground(new java.awt.Color(13, 36, 70));
+        Menu5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Menu5.setForeground(new java.awt.Color(255, 255, 255));
+        Menu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-daily-40.png"))); // NOI18N
+        Menu5.setText("Mostrar Daily");
+        Menu5.setBorder(null);
+        Menu5.setBorderPainted(false);
         Menu5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 Menu5MousePressed(evt);
             }
         });
+        Menu5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Menu5ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(Menu5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 180, 57));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-daily-40.png"))); // NOI18N
-        jLabel8.setText("Fazer Daily");
+        Menu6.setBackground(new java.awt.Color(13, 36, 70));
+        Menu6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Menu6.setForeground(new java.awt.Color(255, 255, 255));
+        Menu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-daily-40.png"))); // NOI18N
+        Menu6.setText("Mostrar Daily");
+        Menu6.setBorder(null);
+        Menu6.setBorderPainted(false);
+        Menu6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Menu6MousePressed(evt);
+            }
+        });
+        Menu6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Menu6ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(Menu6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 180, 57));
 
-        javax.swing.GroupLayout Menu5Layout = new javax.swing.GroupLayout(Menu5);
-        Menu5.setLayout(Menu5Layout);
-        Menu5Layout.setHorizontalGroup(
-            Menu5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Menu5Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(7, Short.MAX_VALUE))
-        );
-        Menu5Layout.setVerticalGroup(
-            Menu5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Menu5Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        Menu7.setBackground(new java.awt.Color(13, 36, 70));
+        Menu7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Menu7.setForeground(new java.awt.Color(255, 255, 255));
+        Menu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-daily-40.png"))); // NOI18N
+        Menu7.setText("Mostrar Daily");
+        Menu7.setBorder(null);
+        Menu7.setBorderPainted(false);
+        Menu7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Menu7MousePressed(evt);
+            }
+        });
+        Menu7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Menu7ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(Menu7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 180, 57));
 
-        jPanel5.add(Menu5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, -1, -1));
-
-        jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 180, 580));
+        jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 180, 600));
 
         jDesktopPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -279,10 +252,10 @@ public class Dashboard extends javax.swing.JFrame {
         );
         jDesktopPanelLayout.setVerticalGroup(
             jDesktopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 580, Short.MAX_VALUE)
+            .addGap(0, 600, Short.MAX_VALUE)
         );
 
-        jPanel3.add(jDesktopPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 920, 580));
+        jPanel3.add(jDesktopPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 920, 600));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -299,67 +272,29 @@ public class Dashboard extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+    private void FazerDailyButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FazerDailyButtonMousePressed
         // TODO add your handling code here:
-        this.dispose();
-    }//GEN-LAST:event_jLabel3MouseClicked
-
-    private void FazerDailyMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FazerDailyMousePressed
-        // TODO add your handling code here:
-        FazerDaily.setBackground(ClickColor);
-        VerDaily.setBackground(DefaultColor);
+        FazerDailyButton.setBackground(ClickColor);
+        VerDailyButton.setBackground(DefaultColor);
         Menu3.setBackground(DefaultColor);
         Menu4.setBackground(DefaultColor);
         Menu5.setBackground(DefaultColor);
-        
-        MenuName.setText("Fazer Daily");
-    }//GEN-LAST:event_FazerDailyMousePressed
+        Menu6.setBackground(DefaultColor);
+        Menu7.setBackground(DefaultColor);
+    }//GEN-LAST:event_FazerDailyButtonMousePressed
 
-    private void VerDailyMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VerDailyMousePressed
+    private void FazerDailyButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FazerDailyButtonMouseClicked
         // TODO add your handling code here:
-        FazerDaily.setBackground(DefaultColor);
-        VerDaily.setBackground(ClickColor);
+        FazerDailyButton.setBackground(ClickColor);
+        VerDailyButton.setBackground(DefaultColor);
         Menu3.setBackground(DefaultColor);
         Menu4.setBackground(DefaultColor);
         Menu5.setBackground(DefaultColor);
-        
-        MenuName.setText("Ver Daily");
-    }//GEN-LAST:event_VerDailyMousePressed
+        Menu6.setBackground(DefaultColor);
+        Menu7.setBackground(DefaultColor);
+    }//GEN-LAST:event_FazerDailyButtonMouseClicked
 
-    private void Menu3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu3MousePressed
-        // TODO add your handling code here:
-        FazerDaily.setBackground(DefaultColor);
-        VerDaily.setBackground(DefaultColor);
-        Menu3.setBackground(ClickColor);
-        Menu4.setBackground(DefaultColor);
-        Menu5.setBackground(DefaultColor);
-        
-        MenuName.setText("Fazer Daily3");
-    }//GEN-LAST:event_Menu3MousePressed
-
-    private void Menu4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu4MousePressed
-        // TODO add your handling code here:
-        FazerDaily.setBackground(DefaultColor);
-        VerDaily.setBackground(DefaultColor);
-        Menu3.setBackground(DefaultColor);
-        Menu4.setBackground(ClickColor);
-        Menu5.setBackground(DefaultColor);
-        
-        MenuName.setText("Fazer Daily4");
-    }//GEN-LAST:event_Menu4MousePressed
-
-    private void Menu5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu5MousePressed
-        // TODO add your handling code here:
-        FazerDaily.setBackground(DefaultColor);
-        VerDaily.setBackground(DefaultColor);
-        Menu3.setBackground(DefaultColor);
-        Menu4.setBackground(DefaultColor);
-        Menu5.setBackground(ClickColor);
-        
-        MenuName.setText("Fazer Daily5");
-    }//GEN-LAST:event_Menu5MousePressed
-
-    private void FazerDailyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FazerDailyMouseClicked
+    private void FazerDailyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FazerDailyButtonActionPerformed
         // TODO add your handling code here:
         FazerDaily fazerDaily;
         if (this.usuario==null){
@@ -371,11 +306,11 @@ public class Dashboard extends javax.swing.JFrame {
         
         jDesktopPanel.removeAll();
         jDesktopPanel.add(fazerDaily).setVisible(true);
-    }//GEN-LAST:event_FazerDailyMouseClicked
+    }//GEN-LAST:event_FazerDailyButtonActionPerformed
 
-    private void VerDailyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VerDailyMouseClicked
+    private void VerDailyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerDailyButtonActionPerformed
         // TODO add your handling code here:
-        MostrarDailys mostrarDaily;
+         MostrarDailys mostrarDaily;
         if (this.usuario==null){
             mostrarDaily = new MostrarDailys();
         }
@@ -386,7 +321,93 @@ public class Dashboard extends javax.swing.JFrame {
         jDesktopPanel.removeAll();
         jDesktopPanel.add(mostrarDaily).setVisible(true);
         
-    }//GEN-LAST:event_VerDailyMouseClicked
+    }//GEN-LAST:event_VerDailyButtonActionPerformed
+
+    private void VerDailyButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VerDailyButtonMousePressed
+        // TODO add your handling code here:
+        FazerDailyButton.setBackground(DefaultColor);
+        VerDailyButton.setBackground(ClickColor);
+        Menu3.setBackground(DefaultColor);
+        Menu4.setBackground(DefaultColor);
+        Menu5.setBackground(DefaultColor);
+        Menu6.setBackground(DefaultColor);
+        Menu7.setBackground(DefaultColor);
+    }//GEN-LAST:event_VerDailyButtonMousePressed
+
+    private void Menu3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu3MousePressed
+        // TODO add your handling code here:
+        FazerDailyButton.setBackground(DefaultColor);
+        VerDailyButton.setBackground(DefaultColor);
+        Menu3.setBackground(ClickColor);
+        Menu4.setBackground(DefaultColor);
+        Menu5.setBackground(DefaultColor);
+        Menu6.setBackground(DefaultColor);
+        Menu7.setBackground(DefaultColor);
+    }//GEN-LAST:event_Menu3MousePressed
+
+    private void Menu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Menu3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Menu3ActionPerformed
+
+    private void Menu4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu4MousePressed
+        // TODO add your handling code here:
+        FazerDailyButton.setBackground(DefaultColor);
+        VerDailyButton.setBackground(DefaultColor);
+        Menu3.setBackground(DefaultColor);
+        Menu4.setBackground(ClickColor);
+        Menu5.setBackground(DefaultColor);
+        Menu6.setBackground(DefaultColor);
+        Menu7.setBackground(DefaultColor);
+    }//GEN-LAST:event_Menu4MousePressed
+
+    private void Menu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Menu4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Menu4ActionPerformed
+
+    private void Menu5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu5MousePressed
+        // TODO add your handling code here:
+        FazerDailyButton.setBackground(DefaultColor);
+        VerDailyButton.setBackground(DefaultColor);
+        Menu3.setBackground(DefaultColor);
+        Menu4.setBackground(DefaultColor);
+        Menu5.setBackground(ClickColor);
+        Menu6.setBackground(DefaultColor);
+        Menu7.setBackground(DefaultColor);
+    }//GEN-LAST:event_Menu5MousePressed
+
+    private void Menu5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Menu5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Menu5ActionPerformed
+
+    private void Menu6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu6MousePressed
+        // TODO add your handling code here:
+        FazerDailyButton.setBackground(DefaultColor);
+        VerDailyButton.setBackground(DefaultColor);
+        Menu3.setBackground(DefaultColor);
+        Menu4.setBackground(DefaultColor);
+        Menu5.setBackground(DefaultColor);
+        Menu6.setBackground(ClickColor);
+        Menu7.setBackground(DefaultColor);
+    }//GEN-LAST:event_Menu6MousePressed
+
+    private void Menu6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Menu6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Menu6ActionPerformed
+
+    private void Menu7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu7MousePressed
+        // TODO add your handling code here:
+        FazerDailyButton.setBackground(DefaultColor);
+        VerDailyButton.setBackground(DefaultColor);
+        Menu3.setBackground(DefaultColor);
+        Menu4.setBackground(DefaultColor);
+        Menu5.setBackground(DefaultColor);
+        Menu6.setBackground(DefaultColor);
+        Menu7.setBackground(ClickColor);
+    }//GEN-LAST:event_Menu7MousePressed
+
+    private void Menu7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Menu7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Menu7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -424,24 +445,20 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel FazerDaily;
-    private javax.swing.JPanel Menu3;
-    private javax.swing.JPanel Menu4;
-    private javax.swing.JPanel Menu5;
+    private javax.swing.JButton FazerDailyButton;
+    private javax.swing.JButton Menu3;
+    private javax.swing.JButton Menu4;
+    private javax.swing.JButton Menu5;
+    private javax.swing.JButton Menu6;
+    private javax.swing.JButton Menu7;
     private javax.swing.JLabel MenuName;
-    private javax.swing.JPanel VerDaily;
+    private javax.swing.JButton VerDailyButton;
+    private javax.swing.JLabel bemVindoText;
     private javax.swing.JDesktopPane jDesktopPanel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JLabel seuIdText;
     // End of variables declaration//GEN-END:variables
 }

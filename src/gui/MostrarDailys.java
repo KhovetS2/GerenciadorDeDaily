@@ -8,12 +8,8 @@ import dao.DailyDao;
 import dao.UsuarioDao;
 import java.awt.Color;
 import java.sql.Date;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
-import javax.management.RuntimeErrorException;
 import javax.swing.JOptionPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import javax.swing.table.DefaultTableModel;
@@ -83,6 +79,7 @@ public class MostrarDailys extends javax.swing.JInternalFrame {
         salvarAlteracao = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(920, 600));
 
         jScrollPane3.setPreferredSize(new java.awt.Dimension(920, 591));
 
@@ -315,6 +312,7 @@ public class MostrarDailys extends javax.swing.JInternalFrame {
             DefaultTableModel model = (DefaultTableModel)tabelaDaily.getModel();
             int selectedRow=tabelaDaily.getSelectedRow();
             dailyDao.deletarDaily(Integer.parseInt(model.getValueAt(selectedRow, 0).toString()));
+            listarValores(usuario.getId());
             
             
             
@@ -334,9 +332,9 @@ public class MostrarDailys extends javax.swing.JInternalFrame {
             Daily daily = new Daily();
             daily.setId(Integer.parseInt(model.getValueAt(selectedRow, 0).toString()));
             daily.setData(data1);
-            daily.setConteudo(model.getValueAt(selectedRow, 4).toString());
+            daily.setConteudo(jConteudo.getText());
             dailyDao.alterarDaily(daily);
-            
+            listarValores(usuario.getId());
             
             
 

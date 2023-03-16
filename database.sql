@@ -11,7 +11,6 @@ CREATE TABLE usuario (
 
 );
 show tables;
-select * from usuario;
 CREATE TABLE daily (
 
 id int auto_increment NOT NULL PRIMARY KEY,
@@ -20,9 +19,25 @@ dataRealizada date,
 usuario_id int not null,
 constraint fk_usuario_id foreign key (usuario_id) references usuario(id)
 );
+CREATE TABLE dia_de_trabalho (
 
-select daily.id, Conteudo, dataRealizada, nome, cargo from daily inner join usuario on usuario.id = daily.usuario_id;
-desc usuario;
+id int auto_increment NOT NULL PRIMARY KEY,
+dias int,
+usuario_id int not null,
+constraint fk_usuario_id_dias foreign key (usuario_id) references usuario(id)
+);
 
-CREATE USER 'fatec'@'%' IDENTIFIED BY 'fatec';
-GRANT ALL PRIVILEGES ON daily . * TO 'fatec'@'%';
+CREATE TABLE avisos(
+id int auto_increment NOT NULL PRIMARY KEY,
+conteudo VARCHAR(255),
+remetente VARCHAR(80)
+);
+
+CREATE TABLE avisos_tem_usuarios (
+avisos_id_avisos int not null,
+usuario_id_usuarios int not null,
+constraint fk_usuario_id_usuarios foreign key (avisos_id_avisos) references usuario(id),
+constraint fk_avisos_id_avisos foreign key (usuario_id_usuarios) references avisos(id)
+);
+
+

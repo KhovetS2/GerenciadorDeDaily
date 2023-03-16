@@ -7,8 +7,8 @@ import java.sql.SQLException;
 public class Conection {
     public Connection getConnection(){
         try {
-            return DriverManager.getConnection("jdbc:mysql://localhost:5523/daily", "fatec", "fatec");
-            
+            return DriverManager.getConnection("jdbc:mysql://fatec:fatec@localhost/daily");
+
         } catch (SQLException excecao) {
             throw new RuntimeException(excecao);
         }
